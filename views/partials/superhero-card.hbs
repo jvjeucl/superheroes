@@ -1,0 +1,12 @@
+<div class="superhero-card" data-id="{{id}}">
+    <img src="{{imageUrl}}" alt="{{name}}">
+    <div class="superhero-info">
+        <h2>{{name}}</h2>
+        <p>Real Name: {{realName}}</p>
+        <p>Powers: {{#each powers}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+        <p>{{description}}</p>
+        <button class="like-button {{#if liked}}liked{{/if}}" data-id="{{id}}">
+            ❤️
+        </button>
+    </div>
+</div>
