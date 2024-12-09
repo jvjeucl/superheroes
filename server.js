@@ -2,7 +2,6 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const webRoutes = require('./routes/superheroRoutes');
-const apiRoutes = require('./routes/apiRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3210;
@@ -22,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', webRoutes);
-app.use('/api', apiRoutes);
 
 // Start server
 app.listen(PORT, () => {
