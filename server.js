@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3210;
 
 // Handlebars setup
-app.engine('handlebars', exphbs.engine({
+app.engine('hbs', exphbs.engine({
     defaultLayout: 'main',
     partialsDir: path.join(__dirname, 'views/partials')
 }));
